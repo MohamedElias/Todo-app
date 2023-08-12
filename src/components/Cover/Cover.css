@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headCover {
+    @apply w-full h-[300px] bg-cover bg-center bg-[url('../../../images/bg-desktop-light.jpg')]
+    dark:bg-[url('../../../images/bg-desktop-dark.jpg')]
+   /* responsive background */
+    max-[426px]:h-[200px] max-[426px]:bg-[url('../../../images/bg-mobile-light.jpg')]
+    max-mobile:dark:bg-[url('../../../images/bg-mobile-dark.jpg')];
+   /*   background-image: url('../images/bg-mobile-dark.jpg') */
+}

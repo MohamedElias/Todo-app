@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  @apply bg-[#fafafa] h-screen
+  dark:bg-[#181824];
+}
+
+.test {
+  @apply text-3xl font-bold underline mt-[-20px] mb-[20px]
+  dark:text-red-500;
+  
+}
