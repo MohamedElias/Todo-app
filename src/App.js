@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
 import Cover from './components/Cover/Cover'
-import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher'
+import Main from './components/Main/Main';
+
 function App() {
   return (
     <div className='App'>
       <Cover></Cover>
-    <h1 className="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
-    <ThemeSwitcher></ThemeSwitcher>
+      <Main></Main>
     </div>
   )
 }

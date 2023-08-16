@@ -1,0 +1,14 @@
+.mainContainer {
+   @apply absolute flex-col 
+   w-[720px] max-md:w-[90%]
+   left-1/2 top-[200px] translate-x-[-50%] translate-y-[-50%]
+;
+
+}
+.header{
+   @apply flex justify-between items-center mb-[25px];
+}
+.header p {
+   @apply text-white text-[35px] font-[600]
+   tracking-[10px];
+}

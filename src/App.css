@@ -3,7 +3,7 @@
 @tailwind utilities;
 .App {
   @apply bg-[#fafafa] h-screen
-  dark:bg-[#181824];
+  dark:bg-[#181824]; 
 }
 
 .test {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ThemeContext from '../theme-context'
+import ThemeContext from '../../theme-context'
 
 const ThemeSwitcher = () => {
 
@@ -10,12 +10,11 @@ const ThemeSwitcher = () => {
          {theme === 'dark' ? (
             <button
                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-               className="text-gray-500 dark:text-gray-400 bg-white shadow-none p-2 focus:outline-none text-lg rounded-full outline-none ring-transparent cursor-pointer"
+               className="text-white text-lg cursor-pointer"
             >
-               aaaaaaaaaaaaa
                <svg
-                  className="w-6 h-6"
-                  fill="none"
+                  className="w-10 h-10"
+                  fill="white"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +30,12 @@ const ThemeSwitcher = () => {
          ) : (
             <button
                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-               className="text-gray-500 dark:text-gray-400 bg-white focus:outline-none shadow-none p-2 text-lg rounded-full outline-none ring-transparent cursor-pointer"
+               className="text-white shadow-none text-lg cursor-pointer"
             >
-               bbbbbbbbb
                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
+                  className="w-10 h-10"
+                  fill="white"
+                  stroke="none"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                >

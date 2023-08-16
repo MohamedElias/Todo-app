@@ -1,0 +1,15 @@
+.Task{
+   @apply bg-white dark:bg-[#25273c] dark:text-white
+   flex p-4 gap-x-8
+   rounded-[3px] mb-[20px];
+}
+
+.Task input[type='text']{
+   @apply dark:bg-[#25273c]
+   text-[25px] h-[32px] w-[85%];
+   
+}
+.Task input[type='text']:focus{
+   @apply outline-none;
+   
+}
