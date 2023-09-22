@@ -4,7 +4,7 @@ const Addbutton=(props)=>{
 
 
    return (
-      <button className="Addbtn enabled"
+      <button className="Addbtn"
       disabled={props.disabled}
       onClick={props.onClick}></button>
    )

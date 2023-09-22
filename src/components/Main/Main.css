@@ -1,8 +1,6 @@
 .mainContainer {
    @apply absolute flex-col 
-   w-[720px] max-md:w-[90%]
-   left-1/2 top-[200px] translate-x-[-50%] translate-y-[-50%]
-;
+   w-[720px] max-md:w-[90%] top-[100px];
 
 }
 .header{

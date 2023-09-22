@@ -2,7 +2,7 @@
    @apply relative
    rounded-[50%]
    w-[32px] h-[32px]
-   bg-[#ccc];
+   bg-[#888888];
 }
 .round:hover{
    background: linear-gradient(150deg, #73b9f9 30%, #9c83f4 65%);
@@ -10,7 +10,7 @@
 
 .round label {
    @apply dark:bg-[#25273c] bg-white
-   /* border border-[#ccc] */ rounded-[50%]
+   rounded-[50%]
    cursor-pointer
    w-7 h-7
    absolute left-[2px] top-[2px];
