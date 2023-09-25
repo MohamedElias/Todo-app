@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer ,useEffect, useState} from "react";
 import TaskContext from "./TaskContext";
 
 
@@ -40,6 +40,11 @@ const tasklistReducer = (state, action) => {
       localStorage.setItem(('tasks-list'), (JSON.stringify(updatedTasks)))
       return updatedTasks
    }
+   if (action.type === 'clearComplete') {
+      const updatedTasks=[...state].filter((task)=>!task.completed)
+      localStorage.setItem(('tasks-list'), (JSON.stringify(updatedTasks)))
+      return updatedTasks
+   }
 
    return getTasks
 }
@@ -47,6 +52,7 @@ const tasklistReducer = (state, action) => {
 const TaskProvider = (props) => {
    /* localStorage.setItem(('tasks-list'),(JSON.stringify(List))) */
    const [tasklist, dispatchTasklist] = useReducer(tasklistReducer, getTasks());
+   const [previewFilter, setpreviewFilter] = useState(JSON.parse(localStorage.getItem('preview-filter')));
 
    const addTaskHandler = (content) => {
       const Task = {
@@ -69,14 +75,32 @@ const TaskProvider = (props) => {
    const RearrangeEndHandler = (dragTarget) => {
       dispatchTasklist({ type: 'arrangeEnd', dragTarget:dragTarget })
    }
+   const clearCompleteHandelr =()=>{
+      dispatchTasklist({type:'clearComplete'})
+   }
+   
+   const sendPreviewFilterHandler =(filter)=>{
+      if(filter==='All'){
+         setpreviewFilter('All')
+      }
+      if(filter==='Active'){
+         setpreviewFilter('Active')
+      }
+      if(filter==='Completed'){
+         setpreviewFilter('Completed')
+      }
+   }  
+
 
    const taskContext = {
       tasks: tasklist,
+      previewFilter:previewFilter,
       addTask: addTaskHandler,
       removeTask: removeTaskHandler,
       changeState: changeStateHandler,
       rearrangeEnd: RearrangeEndHandler,
-
+      clearComplete:clearCompleteHandelr,
+      sendPreviewFilter:sendPreviewFilterHandler,
    }
 
 

@@ -7,6 +7,7 @@ import { Draggable } from 'react-beautiful-dnd';
 
 
 const Task = (props) => {
+   
    const [taskClass, setTaskClass] = useState(props.complete)
    const taskCompilationHandler = (check) => {
       setTaskClass(check)
@@ -61,7 +62,7 @@ const Task = (props) => {
    ); */
 
    return <React.Fragment>
-      <Draggable direction="vertical" key={props.id} draggableId={props.id.toString()} index={props.index}>
+      <Draggable key={props.id} draggableId={props.id.toString()} index={props.index}>
       {(provided,snapshot)=>(       
          <li 
          ref={provided.innerRef}
@@ -78,5 +79,6 @@ const Task = (props) => {
       )}
       </Draggable>
    </React.Fragment>
+
    }
 export default Task

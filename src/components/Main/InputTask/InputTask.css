@@ -2,7 +2,7 @@
 .Task{
    @apply bg-white dark:bg-[#25273c] dark:text-white
    flex p-4 px-6 gap-x-5
-   rounded-[3px] mb-[20px];
+   rounded-[5px] mb-[20px];
    font-family: 'Quicksand', sans-serif;
 }
 
