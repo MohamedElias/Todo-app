@@ -14,12 +14,13 @@ const TasksList = () => {
       if(TasksList.previewFilter==='All'){
          setpreviewTasklist(TasksList.tasks)
       }
-      if(TasksList.previewFilter==='Active'){
+      else if(TasksList.previewFilter==='Active'){
          setpreviewTasklist(TasksList.tasks.filter((task)=>!task.completed))
       }
-      if(TasksList.previewFilter==='Completed'){
+      else if(TasksList.previewFilter==='Completed'){
          setpreviewTasklist( TasksList.tasks.filter((task)=>task.completed))
       }
+      else setpreviewTasklist(TasksList.tasks)
    }, [TasksList.previewFilter,TasksList.tasks]);  
 
    return (
